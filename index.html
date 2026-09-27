@@ -17,6 +17,36 @@
 
   <!-- Favicon - Tiger themed -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x1F405;</text></svg>">
+  <!-- Seasonal Halloween theme: remove this block and the seasonal decorations to retire it. -->
+  <style id="halloween-theme">
+    :root { --korean-red: #b94c0a; --korean-red-dark: #923805; --korean-blue: #653b96; --korean-blue-dark: #48236e; --korean-blue-light: #ae89db; --black-primary: #1c1427; --black-secondary: #291937; --off-white: #fff6e9; --gold: #ffc16b; }
+    .navbar, .navbar.scrolled { background: rgba(24,16,33,.97); }
+    .nav-links a:hover, .nav-links a.active, .logo-text, .hero h1 .highlight-red { color: #ffae59; }
+    .hero { padding: 155px 0 110px; min-height: 100svh; }
+    .hero-bg { background: radial-gradient(ellipse at 85% 15%, #674078 0, transparent 48%), radial-gradient(ellipse at 10% 90%, #864015 0, transparent 50%), #160f22; }
+    .hero-bg-img { opacity: .12; }
+    .hero-badge { color: #ffcd90; background: #492915; border-color: #bf743c; animation: none; }
+    .hero-subtitle { color: #eee3f4; }
+    .hero-stat .label { color: #d9cbdf; }
+    .hero .btn-primary, .nav-cta { background: #ffad57; color: #24152d !important; }
+    .hero .btn-primary:hover, .nav-cta:hover { background: #ffc98f !important; }
+    .seasonal-kicker { color: #ffc16b; text-transform: uppercase; letter-spacing: .2em; font-size: .85rem; font-weight: 700; margin-bottom: 18px; }
+    .seasonal-message { color: #fff2df; font-family: var(--font-heading); font-size: clamp(1.5rem, 4vw, 2.3rem); letter-spacing: 2px; margin: 14px 0; }
+    .halloween-art { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 1; }
+    .halloween-web { position: absolute; top: 85px; left: 0; width: clamp(150px, 23vw, 300px); height: auto; }
+    .halloween-spider { position: absolute; top: 90px; right: 3%; width: 85px; height: 280px; }
+    .halloween-moon { position: absolute; right: 6%; top: 120px; width: clamp(80px, 14vw, 180px); height: auto; opacity: .7; }
+    .halloween-pumpkins { position: absolute; bottom: 25px; left: 3%; width: clamp(90px, 16vw, 190px); height: auto; }
+    .seasonal-divider { padding: 18px 20px; text-align: center; background: #2e1b40; color: #ffe8ca; font-weight: 600; border-block: 1px solid #965934; letter-spacing: .03em; }
+    .seasonal-divider span { color: #ffb769; margin-inline: 8px; }
+    .testimonials { background: #fff6e9; }
+    .testimonial-card { border-top: 3px solid #b94c0a; }
+    .section-title h2::after { background: linear-gradient(90deg, #dc6c1c, #7443a6); }
+    section[id] { scroll-margin-top: 95px; }
+    @media (max-width: 1050px) { .hamburger { display: flex; } .nav-links { display: none; } .nav-links.active { display: flex; position: absolute; top: 100%; left: 0; width: 100%; flex-direction: column; padding: 20px; background: #1c1427; } }
+    @media (max-width: 600px) { .hero { padding-top: 125px; } .halloween-moon { top: 105px; right: -25px; opacity: .35; } .halloween-pumpkins { bottom: 15px; left: 10px; width: 90px; } .seasonal-kicker { font-size: .72rem; letter-spacing: .12em; } .seasonal-divider { font-size: .85rem; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+  </style>
 </head>
 <body>
 
@@ -76,6 +106,12 @@
       <img src="images/photo_2.jpg" alt="Moe's Sidekicks Taekwondo training floor" class="hero-bg-img">
     </div>
     <div class="tiger-stripes"></div>
+    <div class="halloween-art" aria-hidden="true">
+      <svg class="halloween-web" viewBox="0 0 300 330" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#dbc6eb" stroke-width="1.5" opacity=".5"><path d="M0 0 L290 0 M0 0 L270 110 M0 0 L205 205 M0 0 L110 270 M0 0 L0 290 M50 0 Q41 10 46 19 Q29 20 35 35 Q20 29 19 46 Q10 41 0 50 M105 0 Q88 20 97 40 Q62 42 74 74 Q42 62 40 97 Q20 88 0 105 M165 0 Q138 31 152 63 Q98 65 117 117 Q65 98 63 152 Q31 138 0 165 M225 0 Q188 42 208 86 Q135 90 159 159 Q90 135 86 208 Q42 188 0 225 M285 0 Q238 53 263 109 Q171 114 201 201 Q114 171 109 263 Q53 238 0 285"/><path d="M117 117 V250"/></g><g transform="translate(117 265)" fill="#160f22" stroke="#dba5ff" stroke-width="2.5"><path d="M-9 -8 L-26 -20 L-34 -12 M-12 0 L-32 -7 L-38 4 M-12 8 L-31 14 L-34 25 M-8 14 L-22 26 L-21 35 M9 -8 L26 -20 L34 -12 M12 0 L32 -7 L38 4 M12 8 L31 14 L34 25 M8 14 L22 26 L21 35" fill="none"/><ellipse cy="5" rx="14" ry="19"/><circle cy="-13" r="10"/><g fill="#ffc16b" stroke="none"><circle cx="-4" cy="-14" r="2.5"/><circle cx="4" cy="-14" r="2.5"/></g></g></svg>
+      <svg class="halloween-spider" viewBox="0 0 85 280" xmlns="http://www.w3.org/2000/svg"><path d="M42 0 V185" stroke="#e5d3ee" stroke-width="1.5"/><g transform="translate(42 213)" fill="#21132e" stroke="#ffb769" stroke-width="3" stroke-linecap="round"><path d="M-12 -10 L-30 -27 L-37 -18 M-15 0 L-34 -8 L-39 5 M-15 10 L-34 17 L-37 30 M-10 18 L-24 32 L-23 43 M12 -10 L30 -27 L37 -18 M15 0 L34 -8 L39 5 M15 10 L34 17 L37 30 M10 18 L24 32 L23 43" fill="none"/><ellipse cy="7" rx="17" ry="24"/><circle cy="-16" r="12"/><g fill="#fff0cc" stroke="none"><circle cx="-5" cy="-17" r="3"/><circle cx="5" cy="-17" r="3"/></g></g></svg>
+      <svg class="halloween-moon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="80" fill="#ffe3a1"/><circle cx="73" cy="74" r="16" fill="#d8b87c" opacity=".35"/><circle cx="120" cy="132" r="24" fill="#d8b87c" opacity=".3"/><path d="M15 80 Q32 50 52 69 L57 60 L63 70 Q84 53 105 79 Q85 74 77 91 Q63 79 58 97 Q49 81 36 92 Q31 78 15 80Z M112 42 Q124 25 138 36 L143 29 L148 37 Q165 26 181 43 Q165 40 160 54 Q148 44 144 57 Q137 45 128 53 Q125 43 112 42Z" fill="#21132e"/></svg>
+      <svg class="halloween-pumpkins" viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg"><path d="M78 39 Q69 18 86 10 L95 15 Q82 24 91 39" fill="#7c9150"/><ellipse cx="79" cy="91" rx="65" ry="52" fill="#df701f"/><ellipse cx="79" cy="91" rx="38" ry="52" fill="#f99135"/><path d="M43 83 L60 63 L70 85Z M89 84 L103 63 L117 82Z M46 103 L66 110 L78 102 L92 112 L112 101 Q93 141 64 124Z" fill="#362033"/><path d="M162 67 L164 49 L174 48 L174 69" fill="#829655"/><ellipse cx="170" cy="108" rx="43" ry="34" fill="#c4591a"/><ellipse cx="170" cy="108" rx="25" ry="34" fill="#ed8b32"/><path d="M145 103 L156 88 L164 104Z M177 104 L185 89 L197 105Z M148 115 Q169 128 193 114 Q174 143 148 115Z" fill="#362033"/></svg>
+    </div>
 
     <!-- Taegeuk symbol background -->
     <div class="hero-taegeuk">
@@ -104,6 +140,7 @@
     </div>
 
     <div class="hero-content">
+      <p class="seasonal-kicker">Halloween season at Moe's Sidekicks</p>
       <div class="hero-badge">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         Best Martial Arts Studio in Merced 2024
@@ -118,6 +155,7 @@
         The loyalty of a sidekick, the heart, power &amp; strength of a tiger,
         the mind, body, and spirit of Taekwondo.
       </p>
+      <p class="seasonal-message">Little tigers. Big courage. Spooky-season spirit.</p>
 
       <p class="hero-motto">
         "Be a good friend, let your inner tiger shine &amp; live your best journey!"
@@ -153,6 +191,8 @@
       <div class="arrow"></div>
     </div>
   </section>
+
+  <div class="seasonal-divider"><span aria-hidden="true">&#10022;</span> More courage. More confidence. A little Halloween fun.<span aria-hidden="true">&#10022;</span></div>
 
   <!-- About Section -->
   <section class="about" id="about">
@@ -470,8 +510,9 @@
             <details class="calendar-subscribe">
               <summary class="btn btn-primary">Subscribe to Calendar</summary>
               <div class="calendar-subscribe-options">
-                <p><strong>Google Calendar</strong><br>On a computer, copy the feed URL below, open Google Calendar, and paste it under <strong>Other calendars &rarr; + &rarr; From URL</strong>.</p>
-                <a class="btn btn-calendar-secondary" href="https://calendar.google.com/calendar/u/0/r/settings/addbyurl" target="_blank" rel="noopener">Open Google Calendar</a>
+                <p><strong>Google Calendar</strong><br>Open the link in a computer's browser, sign in if needed, then confirm adding the Sidekicks calendar.</p>
+                <a class="btn btn-calendar-secondary" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fmoessidekickstkd.com%2Fcalendar%2Fmoes-sidekicks.ics" target="_blank" rel="noopener noreferrer">Add to Google Calendar</a>
+                <p class="calendar-help">If Google opens without an Add calendar prompt, copy the feed URL below and paste it in <a href="https://calendar.google.com/calendar/u/0/r/settings/addbyurl" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">Google Calendar's From URL settings</a>. The mobile app may require this step in a desktop browser.</p>
                 <p><strong>Apple Calendar</strong><br>Open this website in Safari or your regular browser, then use the link below to open the subscription preview.</p>
                 <a class="btn btn-calendar-download" href="webcal://moessidekickstkd.com/calendar/moes-sidekicks.ics">Open in Apple Calendar</a>
                 <p><strong>Outlook and other apps</strong><br>Choose <strong>Add calendar &rarr; Subscribe from web</strong> (or Subscribe by URL), then paste the feed URL below.</p>
