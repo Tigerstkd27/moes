@@ -222,6 +222,32 @@ document.addEventListener('DOMContentLoaded', () => {
     motto.style.opacity = '1';
   }
 
+  // --- Calendar subscription URL helper ---
+  const copyCalendarUrl = document.getElementById('copyCalendarUrl');
+  const calendarUrl = document.getElementById('calendarUrl');
+
+  if (copyCalendarUrl && calendarUrl) {
+    copyCalendarUrl.addEventListener('click', async () => {
+      const originalText = copyCalendarUrl.textContent;
+
+      try {
+        await navigator.clipboard.writeText(calendarUrl.textContent.trim());
+        copyCalendarUrl.textContent = 'Copied!';
+      } catch (error) {
+        const range = document.createRange();
+        range.selectNodeContents(calendarUrl);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        copyCalendarUrl.textContent = 'Select & Copy';
+      }
+
+      setTimeout(() => {
+        copyCalendarUrl.textContent = originalText;
+      }, 2200);
+    });
+  }
+
   // --- Navbar background blur enhancement ---
   const navbarEl = document.getElementById('navbar');
   if (navbarEl) {
