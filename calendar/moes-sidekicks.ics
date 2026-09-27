@@ -3,7 +3,7 @@ VERSION:2.0
 PRODID:-//Moe's Sidekicks//October 2026 Schedule//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Moe's Sidekicks - October 2026
+X-WR-CALNAME:Moe's Sidekicks
 X-WR-TIMEZONE:America/Los_Angeles
 X-PUBLISHED-TTL:PT6H
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
@@ -122,7 +122,8 @@ DTSTART;TZID=America/Los_Angeles:20261001T173000
 DTEND;TZID=America/Los_Angeles:20261001T181500
 RRULE:FREQ=WEEKLY;COUNT=3
 SUMMARY:Merced TKD - Ages 4-7
-LOCATION:Ultra Dance with Ana\, 3061 College Green Drive Suite D\, Merced\, CA 95348
+LOCATION:Ultra Dance with Ana\, 3061 College Green Drive Suite D\, Merced\,
+  CA 95348
 END:VEVENT
 BEGIN:VEVENT
 UID:thu-merced-ages-8plus-oct-2026@moessidekickstkd.com
@@ -131,7 +132,8 @@ DTSTART;TZID=America/Los_Angeles:20261001T181500
 DTEND;TZID=America/Los_Angeles:20261001T190000
 RRULE:FREQ=WEEKLY;COUNT=3
 SUMMARY:Merced TKD - Ages 8+
-LOCATION:Ultra Dance with Ana\, 3061 College Green Drive Suite D\, Merced\, CA 95348
+LOCATION:Ultra Dance with Ana\, 3061 College Green Drive Suite D\, Merced\,
+  CA 95348
 END:VEVENT
 BEGIN:VEVENT
 UID:fri-ninja-core-oct-2026@moessidekickstkd.com
@@ -183,7 +185,8 @@ DTSTAMP:20260928T030000Z
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261018
 SUMMARY:Sidekicks Fall Camp
-DESCRIPTION:See the Fall Camp flyer or contact Moe's Sidekicks for times and details.
+DESCRIPTION:See the Fall Camp flyer or contact Moe's Sidekicks for times an
+ d details.
 END:VEVENT
 BEGIN:VEVENT
 UID:bully-defense-2-20261022@moessidekickstkd.com
@@ -200,7 +203,8 @@ DTSTAMP:20260928T030000Z
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
 SUMMARY:No Ninja Core Today
-DESCRIPTION:Family Class and the Bully Defense Workshop still meet as scheduled.
+DESCRIPTION:Family Class and the Bully Defense Workshop still meet as sched
+ uled.
 END:VEVENT
 BEGIN:VEVENT
 UID:bully-defense-3-20261023@moessidekickstkd.com

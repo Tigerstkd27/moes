@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&family=Russo+One&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=20260927-calendar2">
 
   <!-- Favicon - Tiger themed -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x1F405;</text></svg>">
@@ -442,7 +442,6 @@
 
   <!-- October Calendar -->
   <section class="training-calendar" id="calendar">
-    <div class="calendar-scene" aria-hidden="true"></div>
     <div class="container calendar-content">
       <div class="section-title fade-in">
         <span class="calendar-kicker">October 2026</span>
@@ -452,26 +451,41 @@
 
       <div class="calendar-layout">
         <figure class="calendar-poster fade-in">
-          <img src="images/october-2026-calendar.jpg" alt="Moe's Sidekicks October 2026 calendar showing Atwater and Merced classes, Tai-Chi, Ninja Core, workshops, Fall Camp, and Spooktacular events">
-          <figcaption>Official October calendar posted by Moe's Sidekicks.</figcaption>
+          <div class="calendar-art">
+            <img src="images/october-2026-spooky-dojo.png" width="1942" height="809" alt="Four turtle ninjas in a moonlit Halloween dojo with pumpkins and a tiger hiding in the foliage">
+            <div class="calendar-art-title"><span>Moe's Sidekicks</span><strong>October 2026</strong></div>
+          </div>
+          <a class="calendar-schedule" href="images/october-2026-calendar.jpg" target="_blank" rel="noopener" aria-label="Open the October schedule at full size">
+            <img src="images/october-2026-calendar.jpg" width="1999" height="1545" alt="Moe's Sidekicks October 2026 calendar showing Atwater and Merced classes, Tai-Chi, Ninja Core, workshops, Fall Camp, and Spooktacular events">
+          </a>
+          <figcaption>Official October schedule. Tap the calendar to view full size.</figcaption>
         </figure>
 
         <div class="calendar-details fade-in">
           <span class="calendar-eyebrow">Never miss a class</span>
           <h3>Put Sidekicks on your calendar</h3>
-          <p>Subscribe once for updates, or download the October schedule as a standard calendar file.</p>
+          <p>Subscribe to receive changes when we update this feed, or download a one-time copy of October's schedule.</p>
 
           <div class="calendar-actions">
-            <a class="btn btn-primary" href="webcal://moessidekickstkd.com/calendar/moes-sidekicks.ics">Subscribe in Calendar App</a>
-            <a class="btn btn-calendar-secondary" href="https://calendar.google.com/calendar/u/0/r/settings/addbyurl" target="_blank" rel="noopener">Open Google Calendar</a>
+            <details class="calendar-subscribe">
+              <summary class="btn btn-primary">Subscribe to Calendar</summary>
+              <div class="calendar-subscribe-options">
+                <p><strong>Google Calendar</strong><br>On a computer, copy the feed URL below, open Google Calendar, and paste it under <strong>Other calendars &rarr; + &rarr; From URL</strong>.</p>
+                <a class="btn btn-calendar-secondary" href="https://calendar.google.com/calendar/u/0/r/settings/addbyurl" target="_blank" rel="noopener">Open Google Calendar</a>
+                <p><strong>Apple Calendar</strong><br>Open this website in Safari or your regular browser, then use the link below to open the subscription preview.</p>
+                <a class="btn btn-calendar-download" href="webcal://moessidekickstkd.com/calendar/moes-sidekicks.ics">Open in Apple Calendar</a>
+                <p><strong>Outlook and other apps</strong><br>Choose <strong>Add calendar &rarr; Subscribe from web</strong> (or Subscribe by URL), then paste the feed URL below.</p>
+                <p class="calendar-help">If no app opens, use the copyable URL below. Subscriptions refresh on your calendar app's schedule; downloaded files do not refresh.</p>
+              </div>
+            </details>
             <a class="btn btn-calendar-download" href="calendar/moes-sidekicks.ics" download>Download .ics</a>
           </div>
 
           <div class="calendar-url-box">
             <code id="calendarUrl">https://moessidekickstkd.com/calendar/moes-sidekicks.ics</code>
-            <button id="copyCalendarUrl" type="button">Copy URL</button>
+            <button id="copyCalendarUrl" type="button" aria-live="polite">Copy URL</button>
           </div>
-          <p class="calendar-help">For Google Calendar, copy the URL above, open Google Calendar, then choose <strong>Other calendars &rarr; From URL</strong>.</p>
+          <p class="calendar-help">One subscription covers the whole Sidekicks schedule. Your calendar app asks you to confirm before adding it.</p>
 
           <div class="calendar-highlights">
             <h4>October highlights</h4>

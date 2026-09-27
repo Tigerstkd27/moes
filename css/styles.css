@@ -889,16 +889,6 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
   color: var(--white);
 }
 
-.calendar-scene {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg, rgba(8,8,23,0.2), rgba(8,8,23,0.82)),
-    url('../images/october-2026-spooky-dojo.png') center / cover no-repeat;
-  opacity: 0.78;
-  transform: scale(1.015);
-}
-
 .calendar-content {
   position: relative;
   z-index: 1;
@@ -935,22 +925,80 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
 .calendar-poster {
   position: relative;
   min-width: 0;
-  padding: 10px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.22);
-  border-radius: 18px;
-  box-shadow: 0 28px 70px rgba(0,0,0,0.45), 0 0 45px rgba(111,45,189,0.18);
-  backdrop-filter: blur(8px);
-  transform: rotate(-0.35deg);
+  overflow: hidden;
+  background: #171526;
+  border: 1px solid #714935;
+  border-radius: 12px;
 }
 
 .calendar-poster img {
   width: 100%;
-  border-radius: 11px;
+  height: auto;
+}
+
+.calendar-art {
+  position: relative;
+}
+
+.calendar-art-title {
+  position: absolute;
+  inset: 34% 29% 24%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 0 2px 12px #000;
+  font-family: var(--font-heading);
+  line-height: 1.15;
+}
+
+.calendar-art-title span {
+  font-size: clamp(0.8rem, 1.8vw, 1.25rem);
+}
+
+.calendar-art-title strong {
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  color: #ffb347;
+}
+
+.calendar-schedule {
+  display: block;
+  padding: 8px;
+  background: #ff9f1c;
+}
+
+.calendar-schedule:focus-visible {
+  outline: 4px solid white;
+  outline-offset: -4px;
+}
+
+.calendar-subscribe summary {
+  display: list-item;
+  list-style-position: inside;
+}
+
+.calendar-subscribe-options {
+  padding: 18px 0 6px;
+}
+
+.calendar-subscribe-options p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.8);
+  margin: 14px 0;
+}
+
+.calendar-subscribe-options .btn {
+  display: block;
+}
+
+.calendar-subscribe summary:focus-visible {
+  outline: 2px solid #ffb347;
+  outline-offset: 4px;
 }
 
 .calendar-poster figcaption {
-  padding: 12px 6px 3px;
+  padding: 12px;
   color: rgba(255,255,255,0.62);
   font-size: 0.82rem;
   text-align: center;
@@ -1736,11 +1784,6 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
 
   .training-calendar {
     padding: 85px 0;
-  }
-
-  .calendar-scene {
-    background-position: 58% center;
-    opacity: 0.56;
   }
 
   .calendar-details {
