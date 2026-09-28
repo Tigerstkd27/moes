@@ -43,7 +43,7 @@
     .testimonial-card { border-top: 3px solid #b94c0a; }
     .section-title h2::after { background: linear-gradient(90deg, #dc6c1c, #7443a6); }
     section[id] { scroll-margin-top: 95px; }
-    @media (max-width: 1400px) { .hamburger { display: flex; } .nav-links { display: none; } .nav-links.active { display: flex; position: absolute; top: 100%; left: 0; width: 100%; flex-direction: column; padding: 20px; background: #1c1427; } }
+    @media (max-width: 1400px) { .hamburger { display: flex; } .nav-links { display: none; } .nav-links.open { display: flex; position: absolute; top: 100%; left: 0; width: 100%; flex-direction: column; padding: 20px; background: #1c1427; } }
     @media (max-width: 600px) { .hero { padding-top: 125px; } .halloween-moon { top: 105px; right: -25px; opacity: .35; } .halloween-pumpkins { bottom: 15px; left: 10px; width: 90px; } .seasonal-kicker { font-size: .72rem; letter-spacing: .12em; } .seasonal-divider { font-size: .85rem; } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
   </style>
@@ -60,12 +60,22 @@
   </style>
   <style id="offer-styles">
     .active-offers { padding: 75px 0; background: #f3eaf7; }
-    .offer-card { display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:35px;align-items:center;background:#fff;border-radius:18px;overflow:hidden; }
-    .offer-card img { display:block;width:100%;height:auto; }
-    .offer-card > div { padding:30px; }
-    .offer-card h3 { font-size:2.4rem;line-height:1.15;margin-bottom:20px; }
-    .offer-card p { margin-bottom:24px; }
-    @media(max-width:760px) { .offer-card { grid-template-columns:1fr;gap:0; } }
+    .offer-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px; }
+    .offer-card { display:flex;flex-direction:column;background:#fff;border:1px solid #dfd4e6;border-top:5px solid #653b96;border-radius:18px;padding:30px; }
+    .offer-card-header { display:flex;gap:20px;align-items:center;margin-bottom:24px; }
+    .offer-card img { display:block;width:90px;height:90px;object-fit:contain;border-radius:10px;flex:none; }
+    .offer-card h3 { font-size:2.15rem;line-height:1.1;margin:0; }
+    .offer-card .offer-kicker { color:#653b96;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 8px; }
+    .offer-card p { margin-bottom:16px; }
+    .offer-card .offer-price { font-size:2rem;font-weight:700;color:#48236e;line-height:1.25;margin-bottom:8px; }
+    .offer-card .offer-family { font-weight:700;color:#48236e; }
+    .offer-card ul { padding-left:22px;margin:0 0 24px; }
+    .offer-card li { margin:8px 0; }
+    .offer-card .offer-note { font-size:.9rem;color:#514758; }
+    .offer-card .btn { margin-top:auto;display:block;text-align:center;font-size:1.2rem;padding:14px 18px;white-space:normal; }
+    .offer-card .btn:focus-visible { outline:3px solid #48236e;outline-offset:4px; }
+    .offers-help { max-width:760px;margin:26px auto 0;text-align:center; }
+    @media(max-width:760px) { .offer-grid { grid-template-columns:1fr; } .offer-card { padding:24px; } .offer-card-header { gap:14px; } .offer-card img { width:70px;height:70px; } .offer-card h3 { font-size:1.9rem; } }
   </style>
 </head>
 <body>
@@ -89,7 +99,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#programs">Programs</a></li>
         <li><a href="#memberships">Memberships</a></li>
-        <li><a href="#active-offers">Active Offers</a></li>
+        <li><a href="#active-offers">Ways to Start</a></li>
         <li><a href="#instructor">Instructor</a></li>
         <li><a href="#locations">Locations</a></li>
         <li><a href="#calendar">Calendar</a></li>
@@ -331,8 +341,9 @@
   <!-- Why Choose Us -->
   <section class="active-offers" id="active-offers" aria-labelledby="offers-heading">
     <div class="container">
-      <div class="section-title"><h2 id="offers-heading">Active Offers</h2><p>Find your next opportunity to start training.</p></div>
-      <div id="active-offers-list"><p>Contact us for current beginner opportunities.</p></div>
+      <div class="section-title"><h2 id="offers-heading">Two Ways to Start at Sidekicks</h2><p>Try a beginner week or jump into four weeks of training. Choose what feels right for your family.</p></div>
+      <div id="active-offers-list" class="offer-grid"><p>Contact us for current beginner opportunities.</p></div>
+      <p class="offers-help">Training in Atwater and Merced. Master Moe confirms your class schedule and start date personally. Ready to join during a visit? You can also register in person.</p>
     </div>
   </section>
 
@@ -1085,6 +1096,6 @@
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
-  <script src="js/offers.js"></script>
+  <script src="js/offers.js?v=20260928-two-ways"></script>
 </body>
 </html>
