@@ -43,9 +43,29 @@
     .testimonial-card { border-top: 3px solid #b94c0a; }
     .section-title h2::after { background: linear-gradient(90deg, #dc6c1c, #7443a6); }
     section[id] { scroll-margin-top: 95px; }
-    @media (max-width: 1050px) { .hamburger { display: flex; } .nav-links { display: none; } .nav-links.active { display: flex; position: absolute; top: 100%; left: 0; width: 100%; flex-direction: column; padding: 20px; background: #1c1427; } }
+    @media (max-width: 1400px) { .hamburger { display: flex; } .nav-links { display: none; } .nav-links.active { display: flex; position: absolute; top: 100%; left: 0; width: 100%; flex-direction: column; padding: 20px; background: #1c1427; } }
     @media (max-width: 600px) { .hero { padding-top: 125px; } .halloween-moon { top: 105px; right: -25px; opacity: .35; } .halloween-pumpkins { bottom: 15px; left: 10px; width: 90px; } .seasonal-kicker { font-size: .72rem; letter-spacing: .12em; } .seasonal-divider { font-size: .85rem; } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+  </style>
+  <style id="membership-styles">
+    .memberships { padding: 80px 0; background: #fff6e9; }
+    .membership-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    .membership-card { background: #fff; border: 1px solid #dfd4e6; border-top: 5px solid #653b96; border-radius: 14px; padding: 30px; }
+    .membership-card h3 { font-size: 1.8rem; margin-bottom: 12px; }
+    .membership-price { font-size: 2.5rem; font-weight: 700; color: #48236e; margin-bottom: 12px; }
+    .membership-price span { font-size: 1rem; font-weight: 400; color: #514758; }
+    .membership-card p { margin-bottom: 14px; }
+    .membership-note { text-align: center; max-width: 750px; margin: 28px auto 0; }
+    @media(max-width: 760px) { .membership-grid { grid-template-columns: 1fr; } }
+  </style>
+  <style id="offer-styles">
+    .active-offers { padding: 75px 0; background: #f3eaf7; }
+    .offer-card { display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:35px;align-items:center;background:#fff;border-radius:18px;overflow:hidden; }
+    .offer-card img { display:block;width:100%;height:auto; }
+    .offer-card > div { padding:30px; }
+    .offer-card h3 { font-size:2.4rem;line-height:1.15;margin-bottom:20px; }
+    .offer-card p { margin-bottom:24px; }
+    @media(max-width:760px) { .offer-card { grid-template-columns:1fr;gap:0; } }
   </style>
 </head>
 <body>
@@ -84,6 +104,8 @@
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#programs">Programs</a></li>
+        <li><a href="#memberships">Memberships</a></li>
+        <li><a href="#active-offers">Active Offers</a></li>
         <li><a href="#instructor">Instructor</a></li>
         <li><a href="#locations">Locations</a></li>
         <li><a href="#calendar">Calendar</a></li>
@@ -323,6 +345,46 @@
   </section>
 
   <!-- Why Choose Us -->
+  <section class="active-offers" id="active-offers" aria-labelledby="offers-heading">
+    <div class="container">
+      <div class="section-title"><h2 id="offers-heading">Active Offers</h2><p>Find your next opportunity to start training.</p></div>
+      <div id="active-offers-list"><p>Contact us for current beginner opportunities.</p></div>
+    </div>
+  </section>
+
+  <section class="memberships" id="memberships" aria-labelledby="membership-heading">
+    <div class="container">
+      <div class="section-title">
+        <h2 id="membership-heading">Choose Your Membership</h2>
+        <p>Month-to-month Taekwondo training. Every tier includes access to age-appropriate classes in Atwater and Merced.</p>
+      </div>
+      <div class="membership-grid">
+        <article class="membership-card">
+          <h3>Basic</h3>
+          <p class="membership-price">$115 <span>/ month</span></p>
+          <p><strong>Up to 4 classes per month</strong></p>
+          <p>A lighter schedule to keep training part of your routine.</p>
+          <a class="btn btn-primary" href="#contact">Ask About Basic</a>
+        </article>
+        <article class="membership-card">
+          <h3>Excellence</h3>
+          <p class="membership-price">$150 <span>/ month</span></p>
+          <p><strong>Up to 8 classes per month</strong></p>
+          <p>Build a steady training routine with more time to practice.</p>
+          <a class="btn btn-primary" href="#contact">Ask About Excellence</a>
+        </article>
+        <article class="membership-card">
+          <h3>Ignite</h3>
+          <p class="membership-price">$170 <span>/ month</span></p>
+          <p><strong>Unlimited classes per month</strong></p>
+          <p>Make the most of the available Taekwondo schedule.</p>
+          <a class="btn btn-primary" href="#contact">Ask About Ignite</a>
+        </article>
+      </div>
+      <p class="membership-note">Family discounts are available. Contact us for family pricing, class placement, and details about additional costs such as belt testing.</p>
+    </div>
+  </section>
+
   <section class="why-us">
     <div class="why-us-bg-pattern"></div>
     <div class="container">
@@ -1039,5 +1101,6 @@
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
+  <script src="js/offers.js"></script>
 </body>
 </html>
