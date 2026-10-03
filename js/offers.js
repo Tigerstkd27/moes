@@ -2,7 +2,7 @@
 const sidekicksSignupUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdlkspLxR5glkGz_iOgDIr5CWPjnzqWe6WcUtSxllFTaL0uAQ/viewform';
 const sidekicksOffers = [{
   id: 'beginner-week-autumn-2026',
-  status: 'active',
+  status: 'archived',
   kicker: 'Want to try it first?',
   title: 'Beginner Week',
   description: 'Meet Master Moe, attend age- and level-appropriate classes offered during your trial week, and see how Sidekicks feels before deciding to enroll.',
@@ -13,6 +13,21 @@ const sidekicksOffers = [{
   imageAlt: 'Sidekicks Kickstart Confidence beginner week campaign',
   signupUrl: sidekicksSignupUrl + '?entry.1896718406=' + encodeURIComponent('Beginner Week — try it first'),
   buttonLabel: 'Request Your Beginner Week',
+  startsAt: null,
+  endsAt: null
+}, {
+  id: 'meet-and-greet-2026',
+  status: 'active',
+  kicker: 'Come meet us',
+  title: 'Meet & Greet',
+  description: 'Get to know Moe’s Sidekicks with a free 15-minute visit. Take a quick mini lesson, tour the studio, and get information and answers to your questions.',
+  price: 'FREE · 15 minutes',
+  bullets: ['Quick mini lesson', 'Studio tour', 'Information and time for your questions'],
+  note: 'A simple first step to check out the studio. Master Moe personally confirms your visit time.',
+  image: 'images/moes-sidekicks-logo.jpg',
+  imageAlt: 'Moe’s Sidekicks Martial Arts logo',
+  signupUrl: sidekicksSignupUrl + '?entry.1896718406=' + encodeURIComponent('Meet & Greet — free 15-minute visit'),
+  buttonLabel: 'Request Your Meet & Greet',
   startsAt: null,
   endsAt: null
 }, {

@@ -61,6 +61,7 @@
   <style id="offer-styles">
     .active-offers { padding: 75px 0; background: #f3eaf7; }
     .offer-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px; }
+    .offer-grid:has(> .offer-card:only-child) { grid-template-columns:minmax(0,760px);justify-content:center; }
     .offer-card { display:flex;flex-direction:column;background:#fff;border:1px solid #dfd4e6;border-top:5px solid #653b96;border-radius:18px;padding:30px; }
     .offer-card-header { display:flex;gap:20px;align-items:center;margin-bottom:24px; }
     .offer-card img { display:block;width:90px;height:90px;object-fit:contain;border-radius:10px;flex:none; }
@@ -342,7 +343,7 @@
   <!-- Why Choose Us -->
   <section class="active-offers" id="active-offers" aria-labelledby="offers-heading">
     <div class="container">
-      <div class="section-title"><h2 id="offers-heading">Two Ways to Start at Sidekicks</h2><p>Try a beginner week or jump into four weeks of training. Choose what feels right for your family.</p></div>
+      <div class="section-title"><h2 id="offers-heading">Two Ways to Start at Sidekicks</h2><p>Come meet us for a free 15-minute visit, or get started with four weeks of training. Choose what feels right for your family.</p></div>
       <div id="active-offers-list" class="offer-grid"><p>Contact us for current beginner opportunities.</p></div>
       <p class="offers-help">Training in Atwater and Merced. Master Moe confirms your class schedule and start date personally. Ready to join during a visit? You can also register in person.</p>
     </div>
