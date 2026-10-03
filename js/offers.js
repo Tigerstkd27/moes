@@ -1,6 +1,25 @@
 // Temporary offers stay separate from permanent enrollment and membership sections.
 const sidekicksSignupUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdlkspLxR5glkGz_iOgDIr5CWPjnzqWe6WcUtSxllFTaL0uAQ/viewform';
 const sidekicksOffers = [{
+  id: 'one-year-paid-in-full-october-2026',
+  status: 'active',
+  featured: true,
+  kicker: 'One year. Big commitment. Big savings!',
+  title: 'One-Year Paid-in-Full Special',
+  description: 'For new students and current active students: commit to a full year of Taekwondo and enjoy tuition savings plus free extras.',
+  price: 'Save 25% through October 5',
+  laterPrice: 'Save 20% through October 10',
+  discountChangesAt: '2026-10-06T00:00:00-07:00',
+  family: 'Paid in full · Families may split the total into 2 payments',
+  bullets: ['1 FREE Premium Birthday Party', '1 FREE 50-Minute Massage', 'Your choice: a Deluxe Uniform OR a Set of 4 T-Shirts'],
+  note: 'Your monthly tuition rate × 12 months, minus 25% through October 5, 2026, or 20% October 6–10, 2026. Current active students use their existing rate, based on when they started Sidekicks; new students use their starting rate. Message us “ONE YEAR” for your personalized total. Offer ends October 10, 2026.',
+  image: 'images/offers/one-year-special-2026.png',
+  imageAlt: 'Sidekicks one-year paid-in-full special: 25% off through October 5, 20% off October 6–10, free Premium Birthday Party and 50-minute massage, choice of black Deluxe Uniform with yellow belt or four T-shirts. Families may split into two payments.',
+  signupUrl: 'https://m.me/sidekicksmerced',
+  buttonLabel: 'Message Us for Your One-Year Total',
+  startsAt: '2026-10-03T00:00:00-07:00',
+  endsAt: '2026-10-11T00:00:00-07:00'
+}, {
   id: 'beginner-week-autumn-2026',
   status: 'archived',
   kicker: 'Want to try it first?',
@@ -66,7 +85,7 @@ const sidekicksOffers = [{
   root.replaceChildren();
   shown.forEach(offer => {
     const card = document.createElement('article');
-    card.className = 'offer-card';
+    card.className = 'offer-card' + (offer.featured ? ' offer-card-featured' : '');
     const header = document.createElement('div');
     header.className = 'offer-card-header';
     const picture = document.createElement('img');
@@ -82,7 +101,17 @@ const sidekicksOffers = [{
     const title = document.createElement('h3');
     title.textContent = offer.title;
     heading.append(kicker, title);
-    header.append(picture, heading);
+    if (offer.featured) {
+      const flyerLink = document.createElement('a');
+      flyerLink.href = offer.image;
+      flyerLink.className = 'offer-flyer-link';
+      flyerLink.setAttribute('aria-label', 'View the full one-year special flyer');
+      flyerLink.append(picture);
+      card.append(flyerLink);
+      header.append(heading);
+    } else {
+      header.append(picture, heading);
+    }
     card.append(header);
     const paragraph = (text, className = '') => {
       if (!text) return;
@@ -92,7 +121,7 @@ const sidekicksOffers = [{
       card.append(element);
     };
     paragraph(offer.description);
-    paragraph(offer.price, 'offer-price');
+    paragraph(offer.discountChangesAt && now >= Date.parse(offer.discountChangesAt) ? offer.laterPrice : offer.price, 'offer-price');
     paragraph(offer.family, 'offer-family');
     const list = document.createElement('ul');
     (offer.bullets || []).forEach(text => {

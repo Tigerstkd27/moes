@@ -76,6 +76,11 @@
     .offer-card .btn { margin-top:auto;display:block;text-align:center;font-size:1.2rem;padding:14px 18px;white-space:normal; }
     .offer-card .btn:focus-visible { outline:3px solid #48236e;outline-offset:4px; }
     .offers-help { max-width:760px;margin:26px auto 0;text-align:center; }
+    .offer-card-featured { grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:32px;border-top-color:#d8ab36; }
+    .offer-flyer-link { grid-column:1;grid-row:1 / span 7;align-self:start; }
+    .offer-card-featured .offer-flyer-link img { width:100%;height:auto;border-radius:10px; }
+    .offer-card-featured > :not(.offer-flyer-link) { grid-column:2; }
+    @media(max-width:760px) { .offer-card-featured { display:flex; } .offer-flyer-link { margin-bottom:24px; } }
     @media(max-width:760px) { .offer-grid { grid-template-columns:1fr; } .offer-card { padding:24px; } .offer-card-header { gap:14px; } .offer-card img { width:70px;height:70px; } .offer-card h3 { font-size:1.9rem; } }
   </style>
 </head>
@@ -101,7 +106,7 @@
         <li><a href="#programs">Programs</a></li>
         <li><a href="parties.html">Parties</a></li>
         <li><a href="#memberships">Memberships</a></li>
-        <li><a href="#active-offers">Ways to Start</a></li>
+        <li><a href="#active-offers">Active Offers</a></li>
         <li><a href="#instructor">Instructor</a></li>
         <li><a href="#locations">Locations</a></li>
         <li><a href="#calendar">Calendar</a></li>
@@ -343,7 +348,7 @@
   <!-- Why Choose Us -->
   <section class="active-offers" id="active-offers" aria-labelledby="offers-heading">
     <div class="container">
-      <div class="section-title"><h2 id="offers-heading">Two Ways to Start at Sidekicks</h2><p>Come meet us for a free 15-minute visit, or get started with four weeks of training. Choose what feels right for your family.</p></div>
+      <div class="section-title"><h2 id="offers-heading">Active Offers at Sidekicks</h2><p>Explore current specials and ways to get started. Find the next step that fits your goals and your family.</p></div>
       <div id="active-offers-list" class="offer-grid"><p>Contact us for current beginner opportunities.</p></div>
       <p class="offers-help">Training in Atwater and Merced. Master Moe confirms your class schedule and start date personally. Ready to join during a visit? You can also register in person.</p>
     </div>
@@ -1099,6 +1104,6 @@
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
-  <script src="js/offers.js?v=20260928-two-ways"></script>
+  <script src="js/offers.js?v=20261003-one-year"></script>
 </body>
 </html>
